@@ -1,0 +1,26 @@
+ Workflow Diagram Map
+
+```text
+                              ┌──> Send a text message6 (Instant Acknowledgment)
+                              │
+                              ├──> Switch Node ──> Send a text message1 (Rule Reply)
+                              │
+[ Telegram Trigger1 ] ────────┼──> Append row in sheet (User Data Logging)
+                              │
+                              └──> FAQ Node (Read Sheet) ──> [ If Node ]
+                                                                │
+                                              ┌─────────────────┴─────────────────┐
+                                      (True: Match Found)             (False: Fallback)
+                                              │                                   │
+                                    Send a text message2               Code in JavaScript
+                                    (Static FAQ Answer)                           │
+                                                                             memory Node
+                                                                                  │
+                                                                            OpenAI Model
+                                                                                  │
+                                                                        Append row in sheet2
+                                                                                  │
+                                                                          Send a text message
+                                                                          (Dynamic AI Reply)
+
+[ Schedule Trigger ] ─────────> Append row in sheet1 ──> Send a text message4 (Daily Reminder)
