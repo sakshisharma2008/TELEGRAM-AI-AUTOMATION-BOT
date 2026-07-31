@@ -1,0 +1,8 @@
+The project uses the following software tools and technologies:
+
+* **Telegram Bot API:** Used as the messaging platform interface for receiving user messages and sending automated replies.
+* **n8n Automation Engine:** The core visual workflow builder used to orchestrate logic, handle webhooks, and connect all services.
+* **Google Sheets API:** Used as the primary database to log user conversation history and store static FAQ question-answer pairs.
+* **OpenAI API:** Large Language Model (LLM) backend used to process complex queries and generate smart answers.
+* **n8n Memory Node:** Used to store chat history so the bot can remember context across multi-turn conversations.
+* **JavaScript Code Node:** Used for cleaning, manipulating, and structuring JSON message payloads before sending them to the AI model.
